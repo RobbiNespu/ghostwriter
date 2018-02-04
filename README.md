@@ -1,6 +1,6 @@
 # Ghostwriter
 
-Enhanced port of the Ghost "[ghostwriter](https://github.com/roryg/ghostwriter)" theme to the [Hugo](https://gohugo.io) site generator.
+Enhanced port of the Ghost "[ghostwriter](https://github.com/roryg/ghostwriter)" theme to the [Hugo](https://gohugo.io) site generator, personalised from Juraj Bubniak's [Ghostwriter](https://github.com/jbub/ghostwriter) theme.
 
 ## Installation
 
@@ -16,18 +16,14 @@ For more information read the official [setup guide](//gohugo.io/overview/instal
 
 ## Development
 
-After installing the theme you need to install javascript dependencies. You can use 
-`npm` or `yarn` to install them from `package.json`. We are using `webpack` to build
-and package styles. In order to develop with realtime reloading in the browser you can 
-use this powerful combo:
+After installing the theme you need to install javascript dependencies. You can use `npm` or `yarn` to install them from `package.json`. `webpack` is used to build and package the styles. In order to develop with realtime reloading of the style in the browser, the powerful commands can be used together.
 
 ```bash
 hugo server
 yarn run watch
 ```
 
-To update theme styles edit the `styles/style.scss` file. You can then either use the `watch` command
-or run `build` to compile the styles:
+To update theme styles edit the `styles/style.scss` file. You can then either use the `watch` command of `yarn` or `npm` or run `build` to compile the styles:
 
 ```bash
 yarn run build
@@ -117,8 +113,7 @@ googleAnalytics = "XXX"
     weight = 4
 ```
 
-You can also inject arbitrary HTML into `<head>` simply by overriding the `extra-in-head.html`
-partial, which is meant for that purpose.
+You can also inject arbitrary HTML into `<head>` simply by overriding the `extra-in-head.html` partial, which is meant for that purpose.
 
 The theme is enabled with [IndieWeb](https://indieweb.org) support which can be validated via different tools at website [IndieWebify.me](https://indiewebify.me/).
 
