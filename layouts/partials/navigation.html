@@ -1,5 +1,6 @@
 {{ range .Site.Menus.main.ByWeight }}
     <li class="site-nav-item">
         <a title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+        {{ if not (in .Name "About") }} <span class="doticn">•</span>{{ end }}
     </li>
 {{ end }}

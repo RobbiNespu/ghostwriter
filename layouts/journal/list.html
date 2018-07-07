@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<div id="post-index" class="container">
+    <header class="post-header"></header>
+
+    {{ $pag := (.Paginate (.Data.Pages.GroupByDate "Monday. January 02, 2006") 30).PageGroups}}
+    {{ range $pag }}
+    <div class="group-by-meta"><span  class="group-by-meta-text">{{ .Key }}</span></div>
+    <ol class="post-list">
+        {{ range .Pages }}
+            <li itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+                {{ partial "jrnl-stub.html" . }}
+            </li>
+        {{ end }}
+    </ol>
+    {{ end }}
+    <div class="post-navigation">
+        {{ partial "pagination.html" . }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

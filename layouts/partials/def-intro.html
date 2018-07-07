@@ -1,0 +1,11 @@
+<header class="post-header">
+	{{ if in .URL "fiction"}}		
+	    <h1 class="post-title">Stories</h1>
+    	<p class="post-description">From the fictional world</p>
+    {{else if in .URL "opinion" }}
+		<h1 class="post-title">Opinions</h1>
+    	<p class="post-description">On the real world</p>
+	{{ else }}
+ 	   	<p class="post-description">Thoughts on  <span class="post-title" style="color:#E24E42;">{{.Title}}</span>  penned by me</p>
+ 	{{ end }}
+</header>

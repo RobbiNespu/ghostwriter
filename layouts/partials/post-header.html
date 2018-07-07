@@ -1,6 +1,6 @@
 <header class="post-header">
 	{{ if .Params.refs }}
-	    <a href="{{ .Params.refs }}" {{ if .Params.refs }} style="color:#E24E42;" {{end}} target="_blank"> 
+	    <a class="u-in-reply-to" href="{{ .Params.refs }}" style="color:#E24E42;" target="_blank" rel="in-reply-to"> 
 	    	<h1 class="link-title p-name" itemprop="name headline">
 	    		{{ .Title }} 
 	    		<span class="icn">→</span>
@@ -14,7 +14,7 @@
     	{{ if not .Params.refs }}
     		<p class="post-description" itemprop="description">
     			{{ if in .Params.tags "fiction" }} A Short Story {{end}} 
-		    	by <span class="p-author h-card">{{ .Params.author | default .Site.Author.name }}</span>
+		    	by <span class="p-author h-card">Amit Gawande</span>
 		    </p>
 	    {{ end }}
     {{ end }}

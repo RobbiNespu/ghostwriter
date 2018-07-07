@@ -1,6 +1,12 @@
 {{ if .Site.Params.intro }}
     <header class="post-header">
+	    <center><div class="headshot"><img src="/img/headshot.png" alt="Amit Gawande"></div></center> 
         <h1 class="post-title" itemprop="name">{{ .Site.Params.headline }}</h1>
-        <p>{{ .Site.Params.description }}</p>
-    </header>
+        <p class="post-subtitle"> <a href="{{ .Site.BaseURL }}tags/fiction">Stories</a> and <a href="{{ .Site.BaseURL }}tags/opinion">Opinions</a> 
+        by {{ .Site.Author.name }}</p>
+        <p class="sec-break"/>
+    	<p class="intro-writeup">
+	        {{ replace (.Site.Params.writeup | markdownify) "<new_line>" "</p><p class=\"intro-writeup\">" | safeHTML }}
+        </p>
+	</header>
 {{ end }}

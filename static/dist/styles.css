@@ -127,6 +127,7 @@ table tr { border-bottom: 1px dotted #666; }
 .site-nav-item a:hover { color: #e24e42; text-decoration: underline; }
 .intro-writeup { margin: 10px; text-transform: none; }
 .sec-break { align: center; content: none; margin: 10px auto 0; width: 200px; border-bottom: 1px dotted; }
+.separator { content: none; margin: 10px auto 0; width: 150px; }
 .headshot { width: 150px; height: 150px; height: auto; }
 #latest-post { display: none; }
 .post-container { margin: 0 40px; }
@@ -147,8 +148,14 @@ table tr { border-bottom: 1px dotted #666; }
 .post-tags span, .share span { font-weight: 600; }
 .post-tags { float: left; margin: 3px 0 0; }
 .post-tags a:hover { color: #e24e42; }
-.post-mentions { background: #fff5b8; color: #666; font-size: 16px; margin: 10px; padding: 15px; }
+.post-mentions { padding-top: 15px; margin-top: 10px; border-top: 1px solid #aeadad; border-bottom: 1px solid #aeadad; font-size: 16px; }
 .post-mentions a:hover { color: #e24e42; }
+.post-mentions ul { list-style: none; padding: 0; }
+.mention { font-size: 16px; margin: 0 0 30px 0; }
+.mention-author { color: #666; text-transform: uppercase; text-decoration: underline; }
+.mention-social { color: #666; text-transform: uppercase; }
+.mention-text p { margin-bottom: 2px; }
+.commented { color: #666; text-transform: none; }
 .post-note { background: #fff5b8; border-left: 2px solid #e24e42; padding: 10px; margin-right: 5px; }
 .post-note h2 { margin-top: 5px; }
 .share { float: right; }
@@ -158,7 +165,10 @@ table tr { border-bottom: 1px dotted #666; }
 .newer-posts, .older-posts { float: left; background: #0366d6; color: #fefefe; font-size: 14px; font-weight: 600; margin: 0 5px; padding: 5px 10px 6px; text-transform: uppercase; }
 .newer-posts:hover, .older-posts:hover { color: #fefefe; background: #e24e42; }
 .page-number { display: none; }
-.image-credit { font-size: 14px; color: #666; margin: 5px auto 0; }
+.image-credit { font-size: 14px; }
+.now-metadata { font-size: 16px; }
+.image-credit, .now-metadata { color: #666; margin: 5px auto 0; }
+.now-counter { font-size: 16px; color: #e24e42; margin: 5px auto 0; background-color: #fff5b8; }
 .post-list { list-style: none; margin: 5px; padding: 0; }
 .post-summary { font-size: 18px; color: #666; line-height: 1.6; margin: 10px 0 5px; }
 .post-stub { border-bottom: 1px dotted #e24e42; margin: 5px; position: relative; }
@@ -169,12 +179,21 @@ table tr { border-bottom: 1px dotted #666; }
 .post-stub-tag { background: #e24e42; border-radius: 3px; color: #fff; float: right; font-size: 10px; margin: 7px 0 0; padding: 0 5px; text-transform: uppercase; }
 .post-stub-title { display: inline-block; margin: 0; text-transform: none; }
 .post-stub-description { display: inline-block; margin: 0; text-transform: none; }
+.group-by-meta { font-size: 20px; color: #000; padding-top: 20px; padding-left: 20px; }
+.group-by-meta-text { padding-bottom: 5px; border-bottom: 2px solid #e24e42; }
 .post-stub-date { display: inline-block; }
 .post-stub-date:before { content: " ~ "; }
-.jrnl-entry-date { display: inline-block; color: #666; font-size: 12px; }
-.jrnl-entry-date:before { content: " ~ "; }
-.jrnl-entry-date a { color: #666; }
-.jrnl-entry-date a:hover { color: #0366d6; }
+.journal-entry { font-size: 16px; padding: 10px 5px; margin-right: 5px; }
+.journal-entry p { margin-bottom: 5px; }
+.journal-entry h2 { margin-top: 5px; }
+.jrnl-entry-date { padding: 0; }
+.jrnl-mf-data { padding: 5px 0; margin: 5px 0; text-decoration: underline; }
+.jrnl-mf-data a { color: #0366d6; }
+.jrnl-mf-data a:hover { color: #e24e42; }
+.mention-date, .jrnl-entry-date { display: inline-block; color: #666; font-size: 12px; }
+.mention-date:before, .jrnl-entry-date:before { content: " ~ "; }
+.mention-date a, .jrnl-entry-date a { color: #666; }
+.mention-date a:hover, .jrnl-entry-date a:hover { color: #0366d6; }
 .next-posts-link a, .previous-posts-link a { display: block; padding: 8px 11px; }
 .author-profile { margin: 0 40px; }
 .author-profile:after { border-bottom: 1px dotted #e24e42; content: ""; display: block; margin: 40px auto 0; width: 100px; }

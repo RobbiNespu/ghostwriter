@@ -1,0 +1,7 @@
+<article class="post-container">
+    <header class="post-header"> </header>
+    {{ partial "page-content.html" . }}
+    <time class="dt-published image-credit" datetime="{{ dateFormat "02 Jan 06 15:04 MST" .Date.UTC }}" itemprop="datePublished">
+            Updated on {{ dateFormat (default "Mon, Jan 2, 2006" .Site.Params.dateFormat) .Date.UTC }}
+    </time>   
+</article>

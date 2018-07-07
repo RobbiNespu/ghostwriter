@@ -1,0 +1,30 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": {{ .Site.Title | jsonify  }},
+    "home_page_url": {{ .Permalink | jsonify }},
+    {{ with  .OutputFormats.Get "jsonfeed" -}}
+    "feed_url": {{ .Permalink | jsonify  }},
+    {{- end }}
+    {{ if (.Site.Author) or (.Site.Params.author_url) -}}
+    "author": {
+        {{ if .Site.Author -}}
+        "name": {{ .Site.Author.name | jsonify }},
+        "url": {{ .Site.Author.profile | jsonify }}
+        {{- end }}
+    },
+    {{- end }}
+    {{ if .Data.Pages }}
+    "items": [
+        {{ $pag := where .Data.Pages "Section" "post" }}
+        {{ range $index, $element := first 20 $pag }}
+        {{if $index }},{{end}} {
+            "title": {{ $element.Title | jsonify }},
+            "id": {{ $element.Permalink | jsonify }},
+            "url": {{ $element.Permalink | jsonify }},
+            "content_html": {{ $element.Content | jsonify }},
+            "date_published": {{ $element.Date.Format "2006-01-02T15:04:05-0700" | jsonify }}
+        }
+        {{ end }}
+    ]
+    {{ end }}
+}

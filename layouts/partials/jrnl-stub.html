@@ -1,0 +1,38 @@
+	<article class="h-entry">
+		<div class="p-author h-card" style="display:none">
+			<img src="https://www.amitgawande.com/img/headshot.png" class="u-photo" width="40">
+			<a href="https://www.amitgawande.com/" class="u-url p-name">Amit Gawande</a>
+		</div>
+		<div class="journal-entry"> 
+			{{ if .Title }}
+				<h2> {{ .Title }} </h2>
+			{{ end }}
+			{{ range index .Params "mf-like-of" }}
+				<div class="jrnl-mf-data p-summary"> <span style="color:#E24E42;">★</span> Liked the post 
+					<a class="u-like-of" href="{{ . }}" target="_blank" rel="like-of"> 
+						{{.}}
+					</a>
+				</div>
+			{{ end  }}
+			{{ range index .Params "mf-photo" }}
+				<img class="post-featured-image" src="{{ . }}"> 
+			{{ end  }}
+			{{ range index .Params "mf-in-reply-to" }}
+			<div class="jrnl-mf-data">
+				<span style="color:#E24E42;"><i class="fa fa-comments"></i></span> in reply to
+				<a class="u-in-reply-to" href="{{ . }}" target="_blank" rel="in-reply-to"> 
+					{{ $url := urls.Parse . }}		
+					a post on {{ $url.Host }}
+				</a>
+			</div>
+			{{ end  }}			
+			<div class="e-content">{{ .Content }}</div>
+			<div class="jrnl-entry-date">
+				<a class="u-url" href="{{ .Permalink }}">
+					<time class="dt-published" datetime="{{ dateFormat "02 Jan 06 15:04 MST" .Date.UTC }}">
+						{{ dateFormat "02 Jan 06 15:04 MST" .Date.UTC }}
+					</time>
+				</a>
+			</div>
+		</div>
+	</article>

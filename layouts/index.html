@@ -4,15 +4,19 @@
     {{ partial "intro.html" . }}
 
     <ol class="post-list">
-        {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
-        {{ range $pag.Pages }}
+	    {{ range  first 1  (where .Data.Pages "Params.featured" true)}}
+        	{{ partial "post-stub.html" . }}
+        {{ end }}
+	</ol>
+
+	<center><h1 style = "margin: 20px auto 5px; color: #E24E42;" class="post-description" itemprop="description">Selected Posts for You</h1></center>
+    <p class="sec-break"/>
+    <ol class="post-list">
+        {{ $pag := where .Data.Pages "Type" "post" }}
+        {{ range (shuffle $pag | first 5) }}
             {{ partial "post-stub.html" . }}
         {{ end }}
     </ol>
-
-    <div class="post-navigation">
-        {{ partial "pagination.html" . }}
-    </div>
 </div>
 
 {{ partial "footer.html" . }}

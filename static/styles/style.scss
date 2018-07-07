@@ -329,6 +329,12 @@ table {
 	border-bottom: 1px dotted;
 }
 
+.separator {
+	content: none; 
+	margin : 10px auto 0; 
+	width: 150px;
+}
+
 .headshot {
 	width: 150px; 
 	height: 150px; 
@@ -427,13 +433,41 @@ table {
 }
 
 .post-mentions {
-	background:#fff5b8;
-	color: #666;
+	/*background:#f0f0f0;
+    color: #666;*/
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: 1px solid #AEADAD;
+    border-bottom: 1px solid #AEADAD;
     font-size: 16px;
-	
-	margin: 10px;
-	padding: 15px;
-	a:hover { color: $secondary; }
+    a:hover { color: $secondary; }
+    
+    ul {list-style:none; padding:0;}
+}
+
+.mention{
+    font-size:16px;
+    margin:0 0 30px 0;
+}
+
+.mention-author {
+    color:#666;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.mention-social{
+    color:#666;
+    text-transform: uppercase;
+}
+
+.mention-text{
+    p { margin-bottom:2px; }
+}
+
+.commented {
+    color:#666;
+    text-transform: none;
 }
 
 .post-note {
@@ -486,10 +520,20 @@ table {
 
 .page-number { display: none; }
 
-.image-credit {
-	font-size: 14px; 
+.image-credit { font-size: 14px; }
+.now-metadata { font-size: 16px; }
+
+.image-credit, 
+.now-metadata {
 	color:#666; 
 	margin: 5px auto 0;
+}
+
+.now-counter { 
+	font-size: 16px; 
+	color: $secondary; 
+	margin: 5px auto 0;	
+	background-color: #fff5b8;
 }
 
 /* ============================================================ */
@@ -555,14 +599,47 @@ table {
     margin: 0;
     text-transform: none;
 }
-
+.group-by-meta{
+    font-size: 20px; 
+    color: #000;
+    padding-top: 20px;
+    padding-left: 20px; 
+}
+.group-by-meta-text{
+    
+    padding-bottom: 5px; 
+    border-bottom: 2px solid $secondary;
+}
 .post-stub-date {
     display: inline-block;
 
     &:before { content: " ~ "; }
 }
 
-.jrnl-entry-date{
+.journal-entry {
+    font-size: 16px;
+	padding: 10px 5px;
+	margin-right: 5px;
+    
+    p {margin-bottom: 5px;}
+	h2 { margin-top: 5px}
+}
+
+.jrnl-entry-date {
+    padding: 0px;
+}
+
+.jrnl-mf-data {
+    padding: 5px 0px; 
+    margin: 5px 0;
+    text-decoration: underline;
+
+    a { color: #0366D6; }
+    a:hover { color: #E24E42; }
+}
+
+.mention-date,
+.jrnl-entry-date {
 	display: inline-block;
 	color: #666; 
 	font-size:12px;

@@ -1,8 +1,11 @@
 {{ partial "header.html" . }}
 
 <div class="container">
-    {{ partial "intro.html" . }}
-    <p class="error">Oh, this page does not exist. You can head back to <a href="{{ .Site.BaseURL }}">homepage</a>.</p>
+	<center><img src="/img/404.jpg"></center>
+    <p class="error">Oops, no words penned about this yet. You can head back to the <a href="{{ .Site.BaseURL }}">homepage</a>.</p>
 </div>
+
+<p style="align: center; content: none; margin : 10px auto 0; width: 200px; border-bottom: 1px dotted !important;"/>
+<header class="post-header"></header>
 
 {{ partial "footer.html" . }}
