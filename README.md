@@ -55,6 +55,16 @@ copyright = "My Name"
 disqusShortname = "XXX"
 googleAnalytics = "XXX"
 
+[Privacy]
+
+[Privacy.disqus]
+    disable = true
+
+[Privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = false
+
 [Author]
     name = "My Name"
     profile = "https://google.com/+XXX"
