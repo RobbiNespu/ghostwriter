@@ -743,7 +743,7 @@ table {
     }
 }
 
-.footer-copyright {
+.footer-copyright, .footer-webring {
     color: #656565;
     font-size: 14px;
     margin: 0;
@@ -756,6 +756,10 @@ table {
 
         &:hover { color: #FEFEFE; }
     }
+}
+
+.footer-webring {
+    padding: 5px 0 10px 0;
 }
 
 /* ============================================================ */
