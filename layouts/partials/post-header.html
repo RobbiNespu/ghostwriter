@@ -14,7 +14,11 @@
     	{{ if not .Params.refs }}
     		<p class="post-description" itemprop="description">
     			{{ if in .Params.tags "fiction" }} A Short Story {{end}} 
-		    	by <span class="p-author h-card">Amit Gawande</span>
+				by Amit Gawande
+				<div class="p-author h-card" style="display: none;">
+					<a class= "u-url" href="https://www.amitgawande.com">Amit Gawande</a>
+					<img class="u-photo" src="/img/profile.jpeg" />
+				</div>				
 		    </p>
 	    {{ end }}
     {{ end }}
