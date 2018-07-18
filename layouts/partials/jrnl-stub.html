@@ -1,11 +1,11 @@
 	<article class="h-entry">
 		<div class="p-author h-card" style="display:none">
-			<img src="https://www.amitgawande.com/img/headshot.png" class="u-photo" width="40">
+			<img class="u-photo" src="/img/profile.jpeg" width="40"/>
 			<a href="https://www.amitgawande.com/" class="u-url p-name">Amit Gawande</a>
 		</div>
 		<div class="journal-entry"> 
 			{{ if .Title }}
-				<h2> {{ .Title }} </h2>
+				<h2 class="p-name"> {{ .Title }} </h2>
 			{{ end }}
 			{{ range index .Params "mf-like-of" }}
 				<div class="jrnl-mf-data p-summary"> <span style="color:#E24E42;">★</span> Liked the post 
