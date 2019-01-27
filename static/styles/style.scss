@@ -97,10 +97,10 @@ aside {
 }
 
 img {
-    display: block;
     margin: 40px 0;
-    width: auto;
     max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px gray;      
 
     &[src$="align-center"] {
         margin: auto;

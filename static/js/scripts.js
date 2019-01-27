@@ -36,7 +36,7 @@ $(document).ready(function(){
   		var men_content = "";
   		if(activity_type && activity_type == "like"){
   			if(!social_media_likes){
-  				social_media_likes = "<li class=\"mention-social\"><i class=\"fa fa-twitter\"></i> ";
+  				social_media_likes = "<li class=\"mention-social\"><i class=\"fa fa-thumbs-up\"></i> ";
   			}
   			social_media_likes = social_media_likes + 
   			"<a href=\"" + data.links[i].data.url + "\">"
@@ -61,7 +61,8 @@ $(document).ready(function(){
 					men_content = data.links[i].data.content;
 				}
   			$("ul#mentions-list").prepend( "<li class=\"mention\">"
-				+ "<div class=\"mention-author\"><i class=\"fa fa-comments\"></i> <a href=\"" + data.links[i].data.author.url + "\">"
+				+ "<div class=\"mention-author\"><i class=\"fa fa-comments\"></i>"
+				+ "<a href=\"" + data.links[i].data.author.url + "\">"
 				+ data.links[i].data.author.name + "</a> <span class=\"commented\">replied:</span></div>"
 				+ "<div class=\"mention-text\">" + men_content + "</div>"
 				+ "<div class=\"mention-date\"><a href=\"" + data.links[i].data.url + "\">"
